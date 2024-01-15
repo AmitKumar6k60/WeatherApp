@@ -1,27 +1,181 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  background: linear-gradient(135deg, #ffffff, #037ad6);
+  /* background: linear-gradient(135deg, #545353, #010a11); */
+  /* background: linear-gradient(135deg, #ffffff, #505356); */
+  height: 100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.fullscreen{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.appicon{
+  width: 40px;
+  height: 40px;
+}
+
+.appName {
+  display: inline;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-left: 8px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* search box  */
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.searchInput {
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 200px;
+  font-weight: 600;
+  
+}
+
+.searchButton {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.searchButton:hover {
+  background-color: #2980b9;
+}
+
+/* outlook picture*/
+.picture{
+  display: flex;
+  margin: auto;
+}
+.picture img{
+  display: flex;
+  max-height: 60px;
+  max-width: 100%;
+  padding: 4px;
+  margin: 10px;
+}
+
+/* weather data block */
+
+.weather-card {
+  display: flex;
+  padding: 20px;
+  color: white;
+  background-color: #042d49;
+  border-radius: 20px;
+  justify-content:space-around;
+  max-width: 800px;
+  align-self: center;
+}
+.left-half{
+  margin: 10px;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.temperature {
+  font-size: 5em;
+  margin: 0;
+}
+
+.outlook {
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outlook img{
+   /* border: 1px solid white;  */
+  /* background-color: rgb(191, 188, 188);  */
+  /* width: 40px; */
+  /* height: 40px; */
+  justify-content: center;
+  /* border-radius: 25%; */
+}
+
+.outlook span{
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.location {
+  margin-top: 15px;
+  text-align: center;
+  /* color: #ffffff; */
+}
+
+.right-half{
+  /* margin: 10px;border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.humidity,
+.windspeed {
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.humidity img, .windspeed img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.humidity div,
+.windspeed div {
+  display: flex;
+  flex-direction: column;
+}
+.sp1{
+  font-size: 1.2em;
+}
+.sp2{
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
+@media (max-width: 600px) {
+  .weather-data {
+    padding: 10px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .humidity,
+  .windspeed {
+    margin-top: 10px;
+  }
 }
