@@ -1,9 +1,6 @@
 import React from 'react'
-import { useWeather } from '..';
 
 export default function Picture() {
-
-  const {data} = useWeather();
 
   return (
     <div className='picture'>

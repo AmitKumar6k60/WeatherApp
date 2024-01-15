@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useWeather } from '..';
+import { useWeather } from '../IndexComponent';
 
 
 export default function WeatherCard() {

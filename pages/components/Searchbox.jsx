@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { useWeather } from '..';
+import { useWeather } from '../IndexComponent';
 
 export default function Searchbox() {
   const {fetchData}=useWeather();
