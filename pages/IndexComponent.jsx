@@ -37,7 +37,7 @@ export const useWeather =()=>{
 
 
 
-export default function index() {
+export default function IndexComponent() {
 
   const [data,setData]=useState(null);
 
